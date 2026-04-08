@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kera Store</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header>
+    KERA STORE
+</header>
+
+<div class="hero">
+    <h1>Welcome to Kera 👕</h1>
+    <p>Discover the latest fashion trends</p>
+</div>
+
+<div class="container">
+    <div class="products" id="products"></div>
+</div>
+
+<footer>
+    © 2026 Kera - All Rights Reserved
+</footer>
+
+<script>
+    const products = [
+        { name: "T-Shirt Black", price: "250 EGP", img: "img/1.jpeg" },
+        { name: "Hoodie White", price: "450 EGP", img: "img/2.jpeg" },
+        { name: "Jacket Denim", price: "650 EGP", img: "img/3.jpeg" },
+        { name: "Sport Pants", price: "300 EGP", img: "img/4.jpeg" }
+    ];
+
+    const container = document.getElementById("products");
+
+    products.forEach(product => {
+        container.innerHTML += `
+            <div class="card">
+                <img src="${product.img}">
+                <div class="card-body">
+                    <h3>${product.name}</h3>
+                    <div class="price">${product.price}</div>
+                    <a href="https://wa.me/201000000000" class="btn" target="_blank">
+                        اطلب الآن
+                    </a>
+                </div>
+            </div>
+        `;
+    });
+</script>
+
+</body>
+</html>
